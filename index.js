@@ -32,7 +32,7 @@ app.post("/deploy", (req, res) => {
 
   exec(
     "terraform apply -auto-approve",
-    { cwd: "D:/aws-devops/terraform/terraform-infra" }, // Correct path to Terraform directory
+    { cwd: "D:/aws-devops/backend-node/" }, // Correct path to Terraform directory
     (error, stdout, stderr) => {
       if (error) {
         console.error("Exec Error:", error);
